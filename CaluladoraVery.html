@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="./styles/master.css">
+  </head>
+  <body>
+    <h1>Calculadora Salarial</h1>
+    <table>
+      <tr class="rowTitle"> <th>Información general</th> </tr>
+
+      <tr>
+        <td>Salario mínimo legal vigente</td>
+        <td>$877.803</td>
+      </tr>
+      <tr>
+        <td>Salario mínimo integral vigente</td>
+        <td>$11.411.439</td>
+      </tr>
+      <tr>
+        <td>Subsidio de transporte</td>
+        <td>$102.854</td>
+      </tr>
+      <tr>
+        <td>Unidad de Valor Tributario (UVT)</td>
+        <td>$35.607</td>
+      </tr>
+
+      <tr class="rowTitle"> <th>Datos de ingreso</th> </tr>
+      <tr>
+        <td><label>Salario</label></td>
+        <td><input type="text" id="txtSalary" placeholder="Ingrese aquí su salario"></td>
+      </tr>
+
+      <tr>
+        <td><label>Otros ingresos mensuales no salariales</label></td>
+        <td><input type="text" id="txtNonSalaryIncome" placeholder="Ingrese aquí sus ingresos no salariales"></td>
+      </tr>
+
+      <tr>
+        <td>Subsidio de transporte</td>
+        <td id="txtTransportSubsideResult">--</td>
+      </tr>
+
+      <tr>
+        <td>Total ingreso promedio mensual</td>
+        <td id="txtTotalIncomeAverageResult">--</td>
+      </tr>
+
+      <tr>
+        <td>Aporte FVP Máximo Exento</td>
+        <td id="txtMaximumExemptFVPContributionResult">--</td>
+      </tr>
+
+      <tr>
+        <td><label>Aporte Fondo de Pensiones Voluntarias.</label></td>
+        <td><input type="text" id="txtVolontaryPension" placeholder="Ingrese aquí su aporte Fondo de Pensiones Voluntarias"></td>
+      </tr>
+
+      <tr>
+        <th>Deducción de retención</th>
+      </tr>
+
+      <tr>
+        <td><label>Pagos por salud</label></td>
+        <td><input type="text" id="txtHealthPay" placeholder="Ingrese aquí sus pagos por saluds"></td>
+      </tr>
+
+      <tr>
+        <td><label>Intereses por vivienda</label></td>
+        <td><input type="text" id="txtInterestForDwelling" placeholder="Ingrese aquí sus pagos por saluds"></td>
+      </tr>
+
+      <tr>
+        <td><label>Dependientes</label></td>
+        <td>
+          <select id="optDepentiendes">
+            <option value="yes">Sí</option>
+            <option value="no">No</option>
+          </select>
+        </td>
+      </tr>
+
+    </table>
+
+    <button type="button" name="btnCalculeCO" id="btnCalculeCO">Hágale pues mijo, calcular</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="Resultado">
+      <table>
+        <tr>
+          <th>Resultados</th>
+        </tr>
+
+        <tr>
+          <td>Salud obligatoria</td>
+          <td id="txtSaludObligatoria"></td>
+        </tr>
+        <tr>
+          <td>Pagos por salud medicina prepagada (empleador como intermediario)</td>
+          <td id="txtPagoMedicinaPrepagada"></td>
+        </tr>
+        <tr>
+          <td>Pensión obligatoria</td>
+          <td id="textPension"></td>
+        </tr>
+        <tr>
+          <td>Fondo de solidaridad</td>
+          <td id="txtFondoSolidaridad"></td>
+        </tr>
+        <tr>
+          <td>Aportes FPV – AFC</td>
+          <td id="txtAportesFPV_AFC"></td>
+        </tr>
+        <tr>
+          <td>Pago por salud</td>
+          <td id="txtPagoSalud"></td>
+        </tr>
+        <tr>
+          <td>Base gravable</td>
+          <td id="txtBaseGravable"></td>
+        </tr>
+        <tr>
+          <td>Retención en la fuente</td>
+          <td id="txtReteFuente"></td>
+        </tr>
+        <tr>
+          <td>Compensación neta mensual</td>
+          <td id="txtCompensacionMensual"></td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="scripts/FinancialCalculator.js">
+    </script>
+
+  </body>
+</html>
