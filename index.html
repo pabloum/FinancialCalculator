@@ -8,7 +8,7 @@
   <body>
     <h1>Calculadora Salarial</h1>
     <table>
-      <tr class="rowTitle"> <th>Información general</th> </tr>
+      <tr> <th class="rowTitle" colspan="2">Información general</th> </tr>
 
       <tr>
         <td>Salario mínimo legal vigente</td>
@@ -27,7 +27,7 @@
         <td>$35.607</td>
       </tr>
 
-      <tr class="rowTitle"> <th>Datos de ingreso</th> </tr>
+      <tr class="rowTitle"> <th colspan="2">Datos de ingreso</th> </tr>
       <tr>
         <td><label>Salario</label></td>
         <td><input type="text" id="txtSalary" placeholder="Ingrese aquí su salario"></td>
@@ -58,8 +58,8 @@
         <td><input type="text" id="txtVolontaryPension" placeholder="Ingrese aquí su aporte Fondo de Pensiones Voluntarias"></td>
       </tr>
 
-      <tr>
-        <th>Deducción de retención</th>
+      <tr class="rowTitle">
+        <th colspan="2">Deducción de retención</th>
       </tr>
 
       <tr>
@@ -94,44 +94,44 @@
     <div id="Resultado">
       <table>
         <tr>
-          <th>Resultados</th>
+          <th colspan="2">Resultados</th>
         </tr>
 
         <tr>
           <td>Salud obligatoria</td>
-          <td id="txtSaludObligatoria"></td>
+          <td id="txtSaludObligatoria">--</td>
         </tr>
         <tr>
           <td>Pagos por salud medicina prepagada (empleador como intermediario)</td>
-          <td id="txtPagoMedicinaPrepagada"></td>
+          <td id="txtPagoMedicinaPrepagada">--</td>
         </tr>
         <tr>
           <td>Pensión obligatoria</td>
-          <td id="textPension"></td>
+          <td id="textPension">--</td>
         </tr>
         <tr>
           <td>Fondo de solidaridad</td>
-          <td id="txtFondoSolidaridad"></td>
+          <td id="txtFondoSolidaridad">--</td>
         </tr>
         <tr>
           <td>Aportes FPV – AFC</td>
-          <td id="txtAportesFPV_AFC"></td>
+          <td id="txtAportesFPV_AFC">--</td>
         </tr>
         <tr>
           <td>Pago por salud</td>
-          <td id="txtPagoSalud"></td>
+          <td id="txtPagoSalud">--</td>
         </tr>
         <tr>
           <td>Base gravable</td>
-          <td id="txtBaseGravable"></td>
+          <td id="txtBaseGravable">--</td>
         </tr>
         <tr>
           <td>Retención en la fuente</td>
-          <td id="txtReteFuente"></td>
+          <td id="txtReteFuente">--</td>
         </tr>
         <tr>
           <td>Compensación neta mensual</td>
-          <td id="txtCompensacionMensual"></td>
+          <td id="txtCompensacionMensual">--</td>
         </tr>
       </table>
     </div>

@@ -10,3 +10,16 @@ table{
 h1 {
   color: purple;
 }
+
+table, th, td {
+  border: 1px solid black;
+}
+
+td {
+  padding: 5px;
+}
+
+th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
