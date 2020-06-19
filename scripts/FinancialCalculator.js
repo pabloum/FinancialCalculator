@@ -60,13 +60,17 @@ function getCompensacionMensual(dependientes, salary) {
   return "no lo c";
 }
 
+function getInput(nameInput) {
+  var input = parseInt(document.getElementById(nameInput).value);
+  return isNaN(input) ? 0 : input;
+}
 
 var calculatorBtnClick = function (e) {
-  var salary            = parseInt(document.getElementById("txtSalary").value);
-  var nonsalaryIncome   = parseInt(document.getElementById("txtNonSalaryIncome").value);
-  var volontaryPension  = parseInt(document.getElementById("txtVolontaryPension").value);
-  var healthPay         = parseInt(document.getElementById("txtHealthPay").value);
-  var dwellingInterest  = parseInt(document.getElementById("txtInterestForDwelling").value);
+  var salary            = getInput("txtSalary");
+  var nonsalaryIncome   = getInput("txtNonSalaryIncome");
+  var volontaryPension  = getInput("txtVolontaryPension");
+  var healthPay         = getInput("txtHealthPay");
+  var dwellingInterest  = getInput("txtInterestForDwelling");
   var dependientes      = document.getElementById("optDepentiendes").value == "yes";
 
   // Results v1
