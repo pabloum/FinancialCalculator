@@ -65,6 +65,11 @@ function getInput(nameInput) {
   return isNaN(input) ? 0 : input;
 }
 
+function convertToCurrency(value) {
+  var currency = "$ " + value.toString().replace(".",",").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return currency;
+}
+
 var calculatorBtnClick = function (e) {
   var salary            = getInput("txtSalary");
   var nonsalaryIncome   = getInput("txtNonSalaryIncome");
@@ -90,20 +95,20 @@ var calculatorBtnClick = function (e) {
   var compensacionMensual = getCompensacionMensual(dependientes, salary);
 
   // Pupulate results
-  document.getElementById("txtTotalIncomeAverageResult").innerHTML           = averageMonthlyIncome;
-  document.getElementById("txtTransportSubsideResult").innerHTML             = transportSubsudy;
-  document.getElementById("txtMaximumExemptFVPContributionResult").innerHTML = maximumExemptFVPContribution;
+  document.getElementById("txtTotalIncomeAverageResult").innerHTML           = convertToCurrency(averageMonthlyIncome);
+  document.getElementById("txtTransportSubsideResult").innerHTML             = convertToCurrency(transportSubsudy);
+  document.getElementById("txtMaximumExemptFVPContributionResult").innerHTML = convertToCurrency(maximumExemptFVPContribution);
 
   // Results v2
-  document.getElementById("txtSaludObligatoria").innerHTML      = saludObligatoria;
-  document.getElementById("txtPagoMedicinaPrepagada").innerHTML = medicinaPrepagada;
-  document.getElementById("textPension").innerHTML              = pension;
-  document.getElementById("txtFondoSolidaridad").innerHTML      = fondoSolidaridad;
-  document.getElementById("txtAportesFPV_AFC").innerHTML        = aportesFPC_AFC;
-  document.getElementById("txtPagoSalud").innerHTML             = pagoSalud;
-  document.getElementById("txtBaseGravable").innerHTML          = baseGravable;
-  document.getElementById("txtReteFuente").innerHTML            = reteFuente;
-  document.getElementById("txtCompensacionMensual").innerHTML   = compensacionMensual;
+  document.getElementById("txtSaludObligatoria").innerHTML      = convertToCurrency(saludObligatoria);
+  document.getElementById("txtPagoMedicinaPrepagada").innerHTML = convertToCurrency(medicinaPrepagada);
+  document.getElementById("textPension").innerHTML              = convertToCurrency(pension);
+  document.getElementById("txtFondoSolidaridad").innerHTML      = convertToCurrency(fondoSolidaridad);
+  document.getElementById("txtAportesFPV_AFC").innerHTML        = convertToCurrency(aportesFPC_AFC);
+  document.getElementById("txtPagoSalud").innerHTML             = convertToCurrency(pagoSalud);
+  document.getElementById("txtBaseGravable").innerHTML          = convertToCurrency(baseGravable);
+  document.getElementById("txtReteFuente").innerHTML            = convertToCurrency(reteFuente);
+  document.getElementById("txtCompensacionMensual").innerHTML   = convertToCurrency(compensacionMensual);
 
   alert("Hoda, Vero :3 <3");
 }
